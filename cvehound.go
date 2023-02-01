@@ -1,4 +1,4 @@
-package cvehound
+package main
 
 import (
 	"fmt"
@@ -9,7 +9,7 @@ import (
 
 const repo = "https://github.com/CVEProject/cvelist.git"
 
-func Run() {
+func main() {
 	if len(os.Args) != 2 {
 		fmt.Println("Usage: cvehound keyword")
 		os.Exit(1)
@@ -37,7 +37,8 @@ func Run() {
 	}
 
 	fmt.Println("Searching for keyword...")
-	output, err := exec.Command("rg", keyword, repoPath).CombinedOutput()
+	regex_string := fmt.Sprintf("(\"TITLE\".*%s\")", keyword)
+	output, err := exec.Command("rg", regex_string, repoPath).CombinedOutput()
 	if err != nil {
 		fmt.Println("Error searching for keyword:", err)
 		os.Exit(1)

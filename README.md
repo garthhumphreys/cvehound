@@ -18,7 +18,12 @@ A Go tool for searching the [CVE Project](https://github.com/CVEProject/cvelist)
 ```go
 
 go build
-./cvehound keyword
+
+// example => ./cvehound keyword
+
+$ ./cvehound webmin
+
+/Users/username/cvelist/2022/0xxx/CVE-2022-0829.json:  "TITLE": "Improper Authorization in webmin/webmin"
 
 ```
 

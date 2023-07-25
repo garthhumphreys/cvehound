@@ -3,7 +3,7 @@
     <img width="194" src=".github/cvehound-logo.svg#gh-dark-mode-only" alt="cvehound">
 </h1>
 
-# cvehound
+# CVEHound
 
 A Go tool for searching the [CVE Project](https://github.com/CVEProject/cvelist) repository for a particular keyword.
 
@@ -24,7 +24,9 @@ go build
 
 ## How it works
 
-The cvehound script first checks if the cvelist repository exists in the user's home directory. If it doesn't, the repository is cloned. If it does, a git pull is performed to update the repository.
+- The cvehound script first checks if the cvelist repository exists in the user's home directory.
+- If the repository doesn't exists, the repository is cloned.
+- If the repository does exists, then a git pull is performed to update the repository.
 
 Once the repository is up-to-date, ripgrep is used to search for the keyword specified by the user. The results are displayed in the command line.
 

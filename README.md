@@ -5,7 +5,7 @@
 
 # CVEHound
 
-A Go tool for searching the [CVE Project](https://github.com/CVEProject/cvelist) repository for a particular keyword.
+A Go security vulnerability research tool for searching the CVE Project repository for a particular keyword.
 
 ## Requirements
 

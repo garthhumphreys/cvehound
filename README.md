@@ -1,3 +1,8 @@
+<h1 align="center">
+    <img width="194" src=".github/cvehound-logo.svg#gh-light-mode-only" alt="cvehound">
+    <img width="194" src=".github/cvehound-logo.svg#gh-dark-mode-only" alt="cvehound">
+</h1>
+
 # cvehound
 
 A Go tool for searching the [CVE Project](https://github.com/CVEProject/cvelist) repository for a particular keyword.
